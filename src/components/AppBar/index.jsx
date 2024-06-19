@@ -1,15 +1,16 @@
 import { HelpOutline, NotificationsNone } from '@mui/icons-material';
 import AppsIcon from '@mui/icons-material/Apps';
+import LibraryAddIcon from '@mui/icons-material/LibraryAdd';
 import { Badge, Box, Button, SvgIcon, Typography } from '@mui/material';
 import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import TrelloLogo from '../../assets/trello.svg?react';
 import ModeSelect from '../ModeSelect';
+import Profiles from './Menus/Profiles';
 import Recent from './Menus/Recent';
 import Starred from './Menus/Starred';
 import Templates from './Menus/Templates';
 import Workspaces from './Menus/Workspaces';
-import Profiles from './Menus/Profiles';
 
 function AppBar() {
   return (
@@ -51,7 +52,9 @@ function AppBar() {
             <Starred />
             <Templates />
 
-            <Button variant='outlined'>Create</Button>
+            <Button variant='outlined' startIcon={<LibraryAddIcon />}>
+              Create
+            </Button>
           </Box>
         </Box>
         {/* <Workspaces /> */}
