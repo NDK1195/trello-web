@@ -15,7 +15,7 @@ import TextField from '@mui/material/TextField';
 import Tooltip from '@mui/material/Tooltip';
 import { useState } from 'react';
 import TrelloLogo from '../../assets/trello.svg?react';
-import ModeSelect from '../ModeSelect';
+import ModeSelect from '../ModeSelect/ModeSelect';
 import Profiles from './Menus/Profiles';
 import Recent from './Menus/Recent';
 import Starred from './Menus/Starred';
