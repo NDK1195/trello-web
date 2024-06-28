@@ -5,6 +5,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import VpnLockIcon from '@mui/icons-material/VpnLock';
 import { Avatar, AvatarGroup, Box, Button, Chip, Tooltip } from '@mui/material';
+import { capitalizeFirstLetter } from '../../../utils/formatter';
 
 const MENU_STYLES = {
   color: 'white',
@@ -20,7 +21,7 @@ const MENU_STYLES = {
   },
 };
 
-function BoardBar() {
+function BoardBar({ board }) {
   return (
     <Box
       px={2}
@@ -40,14 +41,14 @@ function BoardBar() {
         <Chip
           sx={MENU_STYLES}
           icon={<DashboardIcon />}
-          label='Trello MERN stack board'
+          label={capitalizeFirstLetter(board?.title)}
           clickable
         />
 
         <Chip
           sx={MENU_STYLES}
           icon={<VpnLockIcon />}
-          label='Public/Private Workspace'
+          label={board?.type}
           clickable
         />
 
